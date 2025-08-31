@@ -1,87 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Gloss by Beauty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff0f6;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background: #e60073;
-      color: white;
-      padding: 20px;
-    }
-    h1 {
-      margin: 0;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .price {
-      color: #e60073;
-      font-weight: bold;
-      margin: 10px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #e60073;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #fff8f9; color: #333; }
+    header { background: #d63384; color: white; padding: 30px 0 10px 0; text-align: center; }
+    nav { margin: 0; background: #fff0f6; padding: 10px 0; text-align: center; }
+    nav a { color: #d63384; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    section { max-width: 950px; margin: 40px auto; padding: 20px; background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(214,51,132,.12); }
+
+    .gallery img { width: 160px; height: 160px; object-fit: cover; margin: 8px; border-radius: 10px; box-shadow: 0 2px 8px rgba(214,51,132,.1);}
+    .products { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .product { border: 1px solid #eee; border-radius: 12px; padding: 16px; width: 210px; background: #fff0f6; box-shadow: 0 2px 8px rgba(214,51,132,.08);}
+    .product img { width: 100%; border-radius: 8px; }
+    .product h3 { margin-top: 12px; color: #d63384; }
+    .price { font-weight: bold; color: #333; }
+    .btn { background: #d63384; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 8px; }
+
+    .reviews { margin-top: 20px; }
+    .review { border-bottom: 1px solid #eee; padding: 8px 0; }
+    .review:last-child { border-bottom: none; }
+    .review span { color: #d63384; font-weight: bold; }
+
+    .contact { text-align: center; margin-top: 15px; }
+    .contact a { color: #d63384; text-decoration: none; font-weight: bold; margin: 0 8px; }
+    .contact a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      section { padding: 8px; }
+      .gallery img, .product img { width: 90px; height: 90px; }
+      .products { flex-direction: column; align-items: center;}
+      .product { width: 95%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>💄 Gloss by Beauty 💋</h1>
-    <p>Shine with our lip gloss & lip care collection</p>
+    <h1>✨ Gloss by Beauty ✨</h1>
+    <p>Shiny Glosses & Lip Balms for Every Look</p>
   </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section class="products">
+  <section id="home">
+    <h2>Welcome to Gloss by Beauty</h2>
+    <p>Discover the perfect gloss for every occasion. Our lip products are crafted for shine, care, and confidence.</p>
+  </section>
 
-    <!-- Product 1 -->
-    <div class="card">
-      <img src="https://via.placeholder.com/250x200.png?text=Pink+Lip+Gloss" alt="Pink Lip Gloss">
-      <h3>Pink Lip Gloss</h3>
-      <p class="price">₹199</p>
-      <a href="https://wa.me/919805332310?text=Hi%20I%20want%20to%20order%20Pink%20Lip%20Gloss" class="btn">Order on WhatsApp</a>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Gloss by Beauty is dedicated to creating high-quality, nourishing lip products that add a touch of glamour to your everyday look.
+      Our mission is to bring out your natural beauty with safe, cruelty-free and trendy glosses and balms.
+    </p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <img src="https://via.placeholder.com/160x160?text=Gloss+1" alt="Gallery Image 1">
+    <img src="https://via.placeholder.com/160x160?text=Gloss+2" alt="Gallery Image 2">
+    <img src="https://via.placeholder.com/160x160?text=Gloss+3" alt="Gallery Image 3">
+    <img src="https://via.placeholder.com/160x160?text=Gloss+4" alt="Gallery Image 4">
+    <!-- Apne images ke URLs yahan dal sakte hain -->
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review"><span>Priya:</span> "Bahut hi smooth aur shiny gloss hai! Must try."</div>
+    <div class="review"><span>Riya:</span> "Mujhe colors bahut pasand aaye. Fast delivery bhi!"</div>
+    <div class="review"><span>Anjali:</span> "Long lasting moisture, lips bilkul dry nahi hote."</div>
+    <!-- Aur reviews add kar sakte hain -->
+  </section>
+
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x200?text=Pink+Gloss" alt="Pink Gloss">
+      <h3>Pink Gloss</h3>
+      <div class="price">₹199</div>
+      <a class="btn" href="https://wa.me/919805332310?text=I%20want%20to%20order%20Pink%20Gloss">Order on WhatsApp</a>
     </div>
-
-    <!-- Product 2 -->
-    <div class="card">
-      <img src="https://via.placeholder.com/250x200.png?text=Shimmer+Lip+Balm" alt="Shimmer Lip Balm">
-      <h3>Shimmer Lip Balm</h3>
-      <p class="price">₹149</p>
-      <a href="https://wa.me/919805332310?text=Hi%20I%20want%20to%20order%20Shimmer%20Lip%20Balm" class="btn">Order on WhatsApp</a>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x200?text=Moist+Lip+Balm" alt="Moist Lip Balm">
+      <h3>Moist Lip Balm</h3>
+      <div class="price">₹149</div>
+      <a class="btn" href="https://wa.me/919805332310?text=I%20want%20to%20order%20Lip%20Balm">Order on WhatsApp</a>
     </div>
+    <!-- Aur products ka code copy karke add kar sakte hain -->
+  </section>
 
-    <!-- Product 3 -->
-    <div class="card">
-      <img src="https://via.placeholder.com/250x200.png?text=Red+Gloss" alt="Red Gloss">
-      <h3>Classic Red Gloss</h3>
-      <p class="price">₹249</p>
-      <a href="https://wa.me/919805332310?text=Hi%20I%20want%20to%20order%20Classic%20Red%20Gloss" class="btn">Order on WhatsApp</a>
-    </div>
-
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:glossbybeautymax@gmail.com">glossbybeautymax@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919805332310">+91 98053 32310</a></p>
+    <p>Instagram: <a href="https://instagram.com/glossbybeauty">@glossbybeauty</a></p>
   </section>
 </body>
 </html>
